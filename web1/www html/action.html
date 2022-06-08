@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action</title>
+</head>
+
+<body>
+
+<!--函数调用 管道使用-->
+{{ 12.345 | printf "%.2f" }}
+{{ printf "%.2f" 12.345 }}
+
+<!-- if 判断 action  -->
+  {{ if . }}
+    Number is greater than 5!
+  {{ else }}
+    Number is 5 or less!
+  {{ end }}
+
+<!--  循环遍历action1-->
+<ul>
+    {{ range . }}
+    <li>{{ . }}</li>
+<!--    回落机制  如果集合未空返回"nothing to show"-->
+    {{ esle }}
+    <li> Nothing to show</li>
+    {{ end }}
+</ul>
+
+    <div> The dot id {{ . }}</div>
+    <div>
+        {{ with "world" }}
+        Now the dot is set to {{ . }}
+        {{ end }}
+    </div>
+    <div> The dot is {{ . }} again</div>
+</body>
+
+</html>

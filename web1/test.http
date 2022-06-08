@@ -1,0 +1,10 @@
+### fragment test
+GET http://localhost:8080/companies HTTP/1.1
+content-type:application/json
+
+
+{
+  "id": 123,
+  "name": "google",
+  "country": "usa"
+}
